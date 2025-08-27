@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: user-api-config
+  namespace: training-cicd
+data:
+  # Add your configuration values here
+  # Example: DATABASE_HOST: "database-service"

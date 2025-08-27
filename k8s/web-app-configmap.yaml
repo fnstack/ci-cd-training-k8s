@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: web-app-config
+  namespace: training-cicd
+data:
+  NEXT_PUBLIC_API_URL: "http://user-api-service:8080"
