@@ -15,3 +15,8 @@ minikube dashboard
 # Arrêt
 minikube stop
 minikube delete
+
+You can now deploy:
+  - All resources: kubectl apply -f k8s/ -R
+  - Specific app: kubectl apply -f k8s/web-app/ or kubectl apply -f k8s/user-api/
+  - Namespace first: kubectl apply -f k8s/namespace.yaml
