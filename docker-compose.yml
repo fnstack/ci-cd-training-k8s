@@ -1,0 +1,18 @@
+services:
+  web-app:
+    image: gitea.arpce.fnstack.dev/fnstack/web-app
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://user-api:8080
+    volumes:
+      - .env.local:/app/.env.local
+    restart: unless-stopped
+    depends_on:
+      - user-api
+
+  user-api:
+    image: gitea.arpce.fnstack.dev/fnstack/dotnet-api
+    ports:
+      - "5000:8080"
+    restart: unless-stopped
