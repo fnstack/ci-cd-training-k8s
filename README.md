@@ -16,6 +16,8 @@ minikube dashboard
 minikube stop
 minikube delete
 
+export KUBECONFIG=/workspace/ci-cd-training-k8s/kubeconfig-external.yaml
+
 You can now deploy:
   - All resources: kubectl apply -f k8s/ -R
   - Specific app: kubectl apply -f k8s/web-app/ or kubectl apply -f k8s/user-api/
