@@ -18,6 +18,10 @@ minikube delete
 
 export KUBECONFIG=/workspace/ci-cd-training-k8s/kubeconfig-external.yaml
 
+kubectl --kubeconfig=./kubeconfig-external.yaml get svc -n training-cicd
+
+k9s --kubeconfig=./kubeconfig-external.yaml 
+
 You can now deploy:
   - All resources: kubectl apply -f k8s/ -R
   - Specific app: kubectl apply -f k8s/web-app/ or kubectl apply -f k8s/user-api/
